@@ -1,0 +1,907 @@
+/* Contact Page Styles */
+
+/* Contact Header */
+.contact-header {
+    background: linear-gradient(135deg, #4C6FFF 0%, #3358E2 100%);
+    color: white;
+    padding: 96px 0;
+    text-align: center;
+}
+
+.contact-header h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.contact-header .subtitle {
+    font-size: 20px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Options */
+.contact-options {
+    padding: 96px 0;
+    background: white;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+}
+
+.option-card {
+    background: white;
+    border: 1px solid #E1E4E8;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    transition: all 300ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.option-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #4C6FFF 0%, #3358E2 100%);
+}
+
+.option-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(76, 111, 255, 0.15);
+    border-color: #4C6FFF;
+}
+
+.option-icon {
+    width: 80px;
+    height: 80px;
+    background: #E5E9FF;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.option-icon i {
+    width: 40px;
+    height: 40px;
+    color: #4C6FFF;
+}
+
+.option-card h3 {
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.option-card > p {
+    color: #5A5A5A;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.contact-details {
+    background: #F8F9FA;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.contact-details strong {
+    display: block;
+    color: #1E1E1E;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.contact-details span {
+    color: #5A5A5A;
+    font-size: 14px;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 96px 0;
+    background: #F8F9FA;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.form-info h2 {
+    margin-bottom: 24px;
+    font-size: 32px;
+}
+
+.form-info > p {
+    color: #5A5A5A;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.response-times {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.time-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 4px solid #4C6FFF;
+}
+
+.time-item i {
+    width: 24px;
+    height: 24px;
+    color: #4C6FFF;
+    flex-shrink: 0;
+}
+
+.time-item strong {
+    display: block;
+    color: #1E1E1E;
+    margin-bottom: 2px;
+}
+
+.time-item span {
+    color: #5A5A5A;
+    font-size: 14px;
+}
+
+/* Contact Form */
+.contact-form {
+    background: white;
+    padding: 48px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1E1E1E;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #E1E4E8;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4C6FFF;
+    box-shadow: 0 0 0 3px rgba(76, 111, 255, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.checkbox-label a {
+    color: #4C6FFF;
+    text-decoration: none;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E1E4E8;
+    border-radius: 4px;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* FAQ Quick Links */
+.faq-quick-links {
+    padding: 96px 0;
+    background: white;
+    text-align: center;
+}
+
+.faq-quick-links h2 {
+    margin-bottom: 16px;
+    font-size: 36px;
+}
+
+.faq-quick-links > p {
+    color: #5A5A5A;
+    margin-bottom: 48px;
+    font-size: 18px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.faq-item {
+    background: #F8F9FA;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-left: 4px solid #E1E4E8;
+}
+
+.faq-item:hover {
+    background: #E5E9FF;
+    border-left-color: #4C6FFF;
+    transform: translateY(-2px);
+}
+
+.faq-item h4 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #1E1E1E;
+}
+
+.faq-item p {
+    color: #5A5A5A;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.more-help {
+    background: #F8F9FA;
+    padding: 32px;
+    border-radius: 12px;
+    margin-top: 48px;
+}
+
+.more-help h3 {
+    margin-bottom: 12px;
+    color: #1E1E1E;
+}
+
+.more-help p {
+    color: #5A5A5A;
+    margin: 0;
+}
+
+.more-help a {
+    color: #4C6FFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.more-help a:hover {
+    text-decoration: underline;
+}
+
+/* Office Information */
+.office-info {
+    padding: 96px 0;
+    background: #F8F9FA;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.info-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.info-icon {
+    width: 64px;
+    height: 64px;
+    background: #E5E9FF;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.info-icon i {
+    width: 32px;
+    height: 32px;
+    color: #4C6FFF;
+}
+
+.info-card h3 {
+    margin-bottom: 16px;
+    color: #1E1E1E;
+}
+
+.info-card p {
+    color: #5A5A5A;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.info-card address {
+    color: #5A5A5A;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+.phone-number strong {
+    display: block;
+    color: #4C6FFF;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.phone-number span {
+    color: #5A5A5A;
+    font-size: 14px;
+}
+
+.email-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.email-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: left;
+}
+
+.email-item strong {
+    color: #1E1E1E;
+    font-size: 14px;
+}
+
+.email-item span {
+    color: #5A5A5A;
+    font-size: 14px;
+    font-family: monospace;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .form-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    /* Mobile contact header */
+    .contact-header {
+        padding: 48px 0;
+    }
+    
+    .contact-header h1 {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    
+    .contact-header .subtitle {
+        font-size: 16px;
+        padding: 0 8px;
+        line-height: 1.5;
+    }
+    
+    /* Mobile contact options */
+    .contact-options {
+        padding: 48px 0;
+    }
+    
+    .options-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .option-card {
+        padding: 24px 20px;
+        border-radius: 12px;
+        border: 1px solid #E1E4E8;
+        text-align: center;
+        transition: all 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .option-card:active {
+        transform: scale(0.98);
+        background: #F8F9FA;
+    }
+    
+    .option-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 16px;
+        border-radius: 16px;
+    }
+    
+    .option-icon i {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .option-card h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .option-card > p {
+        font-size: 14px;
+        margin-bottom: 16px;
+        line-height: 1.5;
+    }
+    
+    .contact-details {
+        padding: 12px;
+        margin-bottom: 16px;
+        border-radius: 6px;
+    }
+    
+    .contact-details strong {
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+    
+    .contact-details span {
+        font-size: 13px;
+    }
+    
+    /* Mobile contact form section */
+    .contact-form-section {
+        padding: 48px 0;
+    }
+    
+    .form-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .form-info {
+        text-align: center;
+    }
+    
+    .form-info h2 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    
+    .form-info > p {
+        font-size: 14px;
+        margin-bottom: 24px;
+        line-height: 1.6;
+    }
+    
+    .response-times {
+        gap: 12px;
+    }
+    
+    .time-item {
+        padding: 12px;
+        border-radius: 6px;
+        gap: 12px;
+    }
+    
+    .time-item i {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .time-item strong {
+        font-size: 14px;
+    }
+    
+    .time-item span {
+        font-size: 13px;
+    }
+    
+    /* Mobile contact form */
+    .contact-form {
+        padding: 24px 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        font-size: 14px;
+        margin-bottom: 6px;
+        font-weight: 600;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 14px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        border: 2px solid #E1E4E8;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        -webkit-appearance: none;
+        appearance: none;
+        background: white;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #4C6FFF;
+        box-shadow: 0 0 0 3px rgba(76, 111, 255, 0.1);
+    }
+    
+    .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+    
+    .checkbox-group {
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .checkbox-label {
+        gap: 8px;
+        line-height: 1.5;
+        font-size: 14px;
+    }
+    
+    .checkbox-label input[type="checkbox"] {
+        margin: 0;
+        transform: scale(1.2);
+    }
+    
+    .checkmark {
+        width: 18px;
+        height: 18px;
+        border-radius: 3px;
+        margin-top: 3px;
+    }
+    
+    /* Mobile FAQ quick links */
+    .faq-quick-links {
+        padding: 48px 0;
+    }
+    
+    .faq-quick-links h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .faq-quick-links > p {
+        font-size: 16px;
+        margin-bottom: 32px;
+        padding: 0 8px;
+        line-height: 1.5;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+    
+    .faq-item {
+        padding: 18px 16px;
+        border-radius: 10px;
+        border: 1px solid #E1E4E8;
+        transition: all 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .faq-item:active {
+        transform: scale(0.98);
+        background: #F8F9FA;
+    }
+    
+    .faq-item h4 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .faq-item p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    .more-help {
+        padding: 24px 20px;
+        border-radius: 10px;
+        margin-top: 32px;
+    }
+    
+    .more-help h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .more-help p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    /* Mobile office info */
+    .office-info {
+        padding: 48px 0;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .info-card {
+        padding: 24px 20px;
+        border-radius: 12px;
+        text-align: center;
+    }
+    
+    .info-icon {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 16px;
+        border-radius: 12px;
+    }
+    
+    .info-icon i {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .info-card h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .info-card p {
+        font-size: 14px;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+    
+    .info-card address {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .phone-number strong {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+    
+    .phone-number span {
+        font-size: 13px;
+    }
+    
+    .email-item strong {
+        font-size: 13px;
+    }
+    
+    .email-item span {
+        font-size: 13px;
+        word-break: break-all;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-header {
+        padding: 64px 0;
+    }
+    
+    .contact-header h1 {
+        font-size: 28px;
+    }
+    
+    .contact-options,
+    .contact-form-section,
+    .faq-quick-links,
+    .office-info {
+        padding: 64px 0;
+    }
+    
+    .contact-form {
+        padding: 24px 20px;
+    }
+    
+    /* Enhanced mobile form */
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 16px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        border-radius: 8px;
+    }
+    
+    .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+        height: 48px;
+    }
+    
+    /* Mobile contact options */
+    .contact-options-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .option-card {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .option-icon {
+        width: 48px;
+        height: 48px;
+        margin: 0 auto 16px;
+    }
+    
+    .option-card h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .option-card p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    
+    /* Mobile FAQ */
+    .faq-item {
+        border: 1px solid #E1E4E8;
+        border-radius: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .faq-question {
+        padding: 16px 20px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .faq-answer {
+        padding: 0 20px 20px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    /* Mobile office info */
+    .office-card {
+        padding: 24px 20px;
+    }
+    
+    .office-header h3 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+    
+    .office-details {
+        gap: 12px;
+    }
+    
+    .office-detail {
+        font-size: 14px;
+    }
+    
+    .office-detail strong {
+        font-size: 13px;
+    }
+    
+    /* Mobile success/error messages */
+    .form-message {
+        padding: 16px;
+        margin: 16px 0;
+        border-radius: 8px;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .option-card {
+        padding: 20px;
+    }
+    
+    .time-item {
+        padding: 12px;
+    }
+}

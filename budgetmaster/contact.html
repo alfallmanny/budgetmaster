@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Contact BudgetMaster Pro - Get help with budgeting templates, technical support, or general inquiries.">
+    <title>Contact Us - BudgetMaster Pro</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="imgs/favicon.svg">
+    <link rel="alternate icon" href="imgs/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span class="gift-icon">🎁</span>
+            <span class="announcement-text">Free Budgeting Template Today Only —</span>
+            <a href="index.html" class="announcement-link">Download Now</a>
+        </div>
+        <button class="dismiss-btn" onclick="this.parentElement.style.display='none'">
+            <i data-lucide="x"></i>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>BudgetMaster Pro</h1>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-outline" onclick="toggleCart()">
+                    <i data-lucide="shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="contact-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p class="subtitle">We're here to help you succeed with your budgeting journey</p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="contact-options">
+        <div class="container">
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p>Get detailed help with templates, technical issues, or general questions</p>
+                    <div class="contact-details">
+                        <strong>support@budgetmaster.pro</strong>
+                        <span>Response within 24 hours</span>
+                    </div>
+                    <button class="btn btn-secondary" onclick="copyEmail('support@budgetmaster.pro')">
+                        Copy Email Address
+                    </button>
+                </div>
+
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i data-lucide="help-circle"></i>
+                    </div>
+                    <h3>Help Center</h3>
+                    <p>Find answers to common questions and step-by-step guides</p>
+                    <div class="contact-details">
+                        <strong>knowledge base</strong>
+                        <span>24/7 availability</span>
+                    </div>
+                    <button class="btn btn-secondary" onclick="window.open('help.html', '_blank')">
+                        Browse Help Center
+                    </button>
+                </div>
+
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i data-lucide="message-square"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Chat with our team for immediate assistance during business hours</p>
+                    <div class="contact-details">
+                        <strong>Chat Support</strong>
+                        <span>Mon-Fri, 9AM-6PM EST</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="openLiveChat()">
+                        Start Chat
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-info">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible. For the fastest response,
+                        please provide as much detail as possible about your question or issue.</p>
+
+                    <div class="response-times">
+                        <div class="time-item">
+                            <i data-lucide="clock"></i>
+                            <div>
+                                <strong>General Inquiries</strong>
+                                <span>24-48 hours</span>
+                            </div>
+                        </div>
+                        <div class="time-item">
+                            <i data-lucide="zap"></i>
+                            <div>
+                                <strong>Technical Support</strong>
+                                <span>4-8 hours</span>
+                            </div>
+                        </div>
+                        <div class="time-item">
+                            <i data-lucide="credit-card"></i>
+                            <div>
+                                <strong>Billing Questions</strong>
+                                <span>1-2 hours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" onsubmit="submitContactForm(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderNumber">Order Number (if applicable)</label>
+                            <input type="text" id="orderNumber" name="orderNumber" placeholder="e.g., BM2025-12345">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category *</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select a category</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="billing">Billing & Payments</option>
+                            <option value="template">Template Questions</option>
+                            <option value="refund">Refund Request</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority">
+                            <option value="normal">Normal</option>
+                            <option value="high">High</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required
+                            placeholder="Please describe your question or issue in detail. Include any error messages, what you were trying to do, and what you've already tried..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" value="yes">
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter for budgeting tips and new template updates
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="privacy" value="yes" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> and <a
+                                href="terms.html" target="_blank">Terms of Service</a> *
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i data-lucide="send"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Quick Links -->
+    <section class="faq-quick-links">
+        <div class="container">
+            <h2>Before You Contact Us</h2>
+            <p>Check these quick answers to common questions:</p>
+
+            <div class="faq-grid">
+                <div class="faq-item" onclick="toggleQuickFAQ(this)">
+                    <h4>How do I download my templates?</h4>
+                    <p>After purchase, check your email for download links. You can also access them from your account
+                        dashboard.</p>
+                </div>
+
+                <div class="faq-item" onclick="toggleQuickFAQ(this)">
+                    <h4>Can I get a refund?</h4>
+                    <p>Yes! We offer a 30-day money-back guarantee. Contact us with your order number for a full refund.
+                    </p>
+                </div>
+
+                <div class="faq-item" onclick="toggleQuickFAQ(this)">
+                    <h4>Do templates work on mobile?</h4>
+                    <p>Excel templates work on mobile with the Microsoft Excel app. Google Sheets work on any device
+                        with a browser.</p>
+                </div>
+
+                <div class="faq-item" onclick="toggleQuickFAQ(this)">
+                    <h4>Can I customize templates?</h4>
+                    <p>Absolutely! All templates are fully editable. We provide customization guides with detailed
+                        instructions.</p>
+                </div>
+
+                <div class="faq-item" onclick="toggleQuickFAQ(this)">
+                    <h4>What formats are available?</h4>
+                    <p>Templates are available in Excel (.xlsx), Google Sheets, PDF, and some in Notion format.</p>
+                </div>
+
+                <div class="faq-item" onclick="toggleQuickFAQ(this)">
+                    <h4>Do you offer support?</h4>
+                    <p>Yes! We provide email support, detailed help documentation, and video tutorials for all
+                        templates.</p>
+                </div>
+            </div>
+
+            <div class="more-help">
+                <h3>Need More Help?</h3>
+                <p>Visit our comprehensive <a href="help.html">Help Center</a> or check out our <a
+                        href="tutorials.html">Video Tutorials</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Information -->
+    <section class="office-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <h3>Our Office</h3>
+                    <address>
+                        BudgetMaster Pro Inc.<br>
+                        123 Financial Street, Suite 100<br>
+                        Money City, MC 12345<br>
+                        United States
+                    </address>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i data-lucide="phone"></i>
+                    </div>
+                    <h3>Phone Support</h3>
+                    <p>For urgent issues or live assistance:</p>
+                    <div class="phone-number">
+                        <strong>+1 (555) 123-4567</strong>
+                        <span>Monday - Friday, 9AM - 6PM EST</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <h3>Email Addresses</h3>
+                    <div class="email-list">
+                        <div class="email-item">
+                            <strong>General:</strong> info@budgetmaster.pro
+                        </div>
+                        <div class="email-item">
+                            <strong>Support:</strong> support@budgetmaster.pro
+                        </div>
+                        <div class="email-item">
+                            <strong>Billing:</strong> billing@budgetmaster.pro
+                        </div>
+                        <div class="email-item">
+                            <strong>Privacy:</strong> privacy@budgetmaster.pro
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BudgetMaster Pro</h3>
+                    <p>Helping people take control of their finances with simple, powerful budgeting templates.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="catalog.html">All Templates</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="data-usage.html">Data Usage Opt-Out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BudgetMaster Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" onclick="toggleCart()">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">
+                Download for free now
+            </button>
+            <button class="continue-shopping" onclick="toggleCart()">
+                Continue Shopping
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Cart Icon -->
+    <div class="sticky-cart" onclick="toggleCart()">
+        <div class="sticky-cart-icon">
+            <i data-lucide="shopping-cart"></i>
+            <span class="sticky-cart-count" id="stickyCartCount">0</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/clean.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

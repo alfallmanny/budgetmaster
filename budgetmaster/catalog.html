@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Browse our complete collection of budgeting templates for Excel & Google Sheets. Free and premium templates for every budget need.">
+    <title>All Templates - BudgetMaster Pro</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="imgs/favicon.svg">
+    <link rel="alternate icon" href="imgs/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/catalog.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span class="free-text">FREE Budgeting Template TODAY ONLY!</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>BudgetMaster Pro</h1>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="catalog.html" class="nav-link active">Catalog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-outline" onclick="toggleCart()">
+                    <i data-lucide="shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Catalog Header -->
+    <section class="catalog-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>All Templates</h1>
+                <p class="subtitle">Discover the perfect budgeting template for your needs</p>
+                
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Templates</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30-Day</span>
+                        <span class="stat-label">Money Back</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Product Grid -->
+    <section class="catalog-products">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be dynamically inserted here -->
+            </div>
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="no-results-content">
+                    <i data-lucide="search-x"></i>
+                    <h3>No templates found</h3>
+                    <p>Try adjusting your filters or search terms to find what you're looking for.</p>
+                    <button class="btn btn-primary" onclick="clearAllFilters()">Clear all filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+        <div class="container">
+            <div class="actions-content">
+                <h2>Need Help Choosing?</h2>
+                <p>Our templates are designed for different financial goals and skill levels</p>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" onclick="openTemplateGuide()">
+                        <i data-lucide="compass"></i>
+                        Template Guide
+                    </button>
+                    <button class="btn btn-secondary" onclick="window.open('contact.html', '_blank')">
+                        <i data-lucide="help-circle"></i>
+                        Get Recommendations
+                    </button>
+                    <button class="btn btn-primary" onclick="addToCart('complete-budget-suite')">
+                        <i data-lucide="briefcase"></i>
+                        Get Complete Suite
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Bundle -->
+    <section class="featured-bundle">
+        <div class="container">
+            <div class="bundle-card">
+                <div class="bundle-content">
+                    <div class="bundle-info">
+                        <div class="bundle-badge">BEST VALUE</div>
+                        <h2>Complete Budget Suite</h2>
+                        <p>Get all our templates in one package and save 30% compared to buying individually. Perfect for serious budgeters who want comprehensive financial management tools.</p>
+                        
+                        <div class="bundle-features">
+                            <div class="feature-item">
+                                <i data-lucide="check"></i>
+                                <span>All 8+ templates included</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-lucide="check"></i>
+                                <span>Lifetime updates included</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-lucide="check"></i>
+                                <span>Premium support access</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-lucide="check"></i>
+                                <span>Save $20 vs individual prices</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bundle-pricing">
+                            <span class="current-price">$49.99</span>
+                            <span class="original-price">$69.99</span>
+                            <span class="savings">Save $20.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bundle-action">
+                        <button class="btn btn-primary btn-large" onclick="addToCart('complete-budget-suite')">
+                            <i data-lucide="shopping-cart"></i>
+                            Add Complete Suite
+                        </button>
+                        <p class="guarantee-text">30-day money-back guarantee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BudgetMaster Pro</h3>
+                    <p>Helping people take control of their finances with simple, powerful budgeting templates.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="catalog.html">All Templates</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="data-usage.html">Data Usage Opt-Out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BudgetMaster Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart (Same as homepage) -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-overlay" onclick="toggleCart()"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="cart-close" onclick="toggleCart()">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                    <button class="btn btn-primary" onclick="toggleCart()">Continue Shopping</button>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-subtotal">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">$0.00</span>
+                </div>
+                <button class="btn btn-primary btn-full" onclick="proceedToCheckout()">
+                    Download for free now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Cart Icon -->
+    <div class="sticky-cart" onclick="toggleCart()">
+        <div class="sticky-cart-icon">
+            <i data-lucide="shopping-cart"></i>
+            <span class="sticky-cart-count" id="stickyCartCount">0</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Download our FREE budgeting template for Excel & Google Sheets. Works with all currencies worldwide. Instant digital download.">
+    <meta name="keywords"
+        content="budgeting template, excel budget template, google sheets budget, free budget planner, digital download">
+    <title>Budgeting template for Excel & Google Sheets - BudgetMaster Pro</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="imgs/favicon.svg">
+    <link rel="alternate icon" href="imgs/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/clean.css">
+    <link rel="stylesheet" href="styles/product-detail.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Budgeting template for Excel & Google sheets (all currencies)",
+        "description": "Free budgeting template for Excel & Google Sheets that works with all currencies worldwide. Complete with automated calculations and visual charts.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+    
+    <!-- Testimonial Card Placeholder Styles -->
+    <style>
+        /* Facebook Testimonials Section */
+        .testimonials-section {
+            padding: 80px 20px;
+            background-color: #f8f9fa;
+            font-family: 'Inter', Arial, sans-serif;
+            border-top: 1px solid #e9ecef;
+            margin-top: 60px;
+        }
+
+        .testimonials-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .testimonials-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            color: #000;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Testimonial Image Styling */
+        .testimonial-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Full Card Image Placeholder (for fallback) */
+        .card-full-image-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: transparent;
+            border: 2px dashed #ced4da;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 20px;
+        }
+
+        .card-full-image-placeholder:hover {
+            background-color: #e9ecef;
+            border-color: #adb5bd;
+        }
+
+        .placeholder-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+            opacity: 0.6;
+        }
+
+        .placeholder-text {
+            font-size: 16px;
+            color: #6c757d;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .testimonials-section {
+                padding: 60px 16px;
+            }
+
+            .testimonials-title {
+                font-size: 28px;
+                margin-bottom: 32px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .testimonial-image {
+                height: 200px;
+            }
+
+            .card-full-image-placeholder {
+                height: 200px;
+                padding: 16px;
+            }
+
+            .card-full-image-placeholder .placeholder-icon {
+                font-size: 48px;
+            }
+
+            .placeholder-text {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-title {
+                font-size: 24px;
+            }
+
+            .testimonial-image {
+                height: 180px;
+            }
+
+            .card-full-image-placeholder {
+                height: 180px;
+            }
+        }
+
+        /* Results Section */
+        .results-section {
+            padding: 80px 20px;
+            background-color: #ffffff;
+            font-family: 'Inter', Arial, sans-serif;
+            border-top: 1px solid #e9ecef;
+            margin-top: 60px;
+        }
+
+        .results-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .results-overview {
+            padding-right: 40px;
+        }
+
+        .results-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 24px;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        .results-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+        }
+
+        .results-stats {
+            padding-left: 20px;
+        }
+
+        .stats-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+
+        .stat-circle {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: conic-gradient(#2563eb 0deg, #e5e7eb 0deg);
+            flex-shrink: 0;
+        }
+
+        .stat-text {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            flex: 1;
+        }
+
+        .stat-percentage {
+            position: relative;
+            z-index: 2;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e40af;
+        }
+
+        /* Inner circle background for better contrast */
+        .stat-circle::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            background: white;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Mobile Responsiveness for Results */
+        @media (max-width: 768px) {
+            .results-section {
+                padding: 60px 15px;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .results-overview,
+            .results-stats {
+                padding: 0;
+            }
+
+            .results-title {
+                font-size: 36px;
+                text-align: center;
+            }
+
+            .results-description {
+                text-align: center;
+                font-size: 16px;
+            }
+
+            .stats-title {
+                font-size: 20px;
+            }
+
+            .stat-item {
+                margin-bottom: 30px;
+                gap: 15px;
+            }
+
+            .stat-circle {
+                width: 70px;
+                height: 70px;
+            }
+
+            .stat-percentage {
+                font-size: 16px;
+            }
+
+            .stat-circle::before {
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                bottom: 5px;
+            }
+
+            .stat-text {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .results-title {
+                font-size: 28px;
+            }
+
+            .results-description {
+                font-size: 16px;
+            }
+
+            .stat-circle {
+                width: 60px;
+                height: 60px;
+            }
+
+            .stat-percentage {
+                font-size: 14px;
+            }
+
+            .stat-circle::before {
+                top: 4px;
+                left: 4px;
+                right: 4px;
+                bottom: 4px;
+            }
+
+            .stat-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span class="free-text">FREE Budgeting Template TODAY ONLY!</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>BudgetMaster Pro</h1>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-outline" onclick="toggleCart()">
+                    <i data-lucide="shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Product Section -->
+    <main class="product-detail-main">
+        <div class="container">
+            <div class="product-page">
+                <div class="product-grid">
+                    <!-- Product Media -->
+                    <div class="product-media">
+                        <div class="product-image-gallery">
+                            <div class="main-product-image" id="mainImage">
+                                <img src="imgs/template-1.webp" alt="Budgeting template for Excel & Google sheets"
+                                    id="mainImageSrc" loading="lazy">
+                            </div>
+
+                            <!-- Thumbnails -->
+                            <div class="product-thumbnails">
+                                <div class="thumbnail active" data-image="imgs/template-1.webp">
+                                    <img src="imgs/template-1.webp" alt="Template view 1">
+                                </div>
+                                <div class="thumbnail" data-image="imgs/template-2.webp">
+                                    <img src="imgs/template-2.webp" alt="Template view 2">
+                                </div>
+                                <div class="thumbnail" data-image="imgs/template-3.webp">
+                                    <img src="imgs/template-3.webp" alt="Template view 3">
+                                </div>
+                                <div class="thumbnail" data-image="imgs/template-4.webp">
+                                    <img src="imgs/template-4.webp" alt="Template view 4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h1 class="product-title">Budgeting template for Excel & Google sheets (all currencies)</h1>
+
+                            <!-- Rating -->
+                            <div class="rating">
+                                <div class="stars">
+                                    <i data-lucide="star" class="filled"></i>
+                                    <i data-lucide="star" class="filled"></i>
+                                    <i data-lucide="star" class="filled"></i>
+                                    <i data-lucide="star" class="filled"></i>
+                                    <i data-lucide="star" class="filled"></i>
+                                </div>
+                                <span class="rating-text">5.0 (2,847 reviews)</span>
+                            </div>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="price-container">
+                            <div class="price">
+                                <span class="price-item price-item--large">0.00 dh</span>
+                            </div>
+                        </div>
+
+                        <!-- Add to Cart Form -->
+                        <div class="product-form">
+                            <div class="product-form__buttons">
+                                <button type="submit" name="add"
+                                    class="product-form__cart-submit button button--full-width"
+                                    onclick="addToCartSimple()">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Add to Cart</span>
+                                </button>
+                            </div>
+
+                            <div class="product-form__note">
+                                <p><strong>⚠️ This is a digital product – no physical item will be shipped!</strong></p>
+                                <p>⚠️ To download all files, please use the Safari or Chrome browser.</p>
+                                <p>⚠️ Due to the digital nature of the product, WiseBudget does not offer returns,
+                                    exchanges, cancellations, or refunds. Please read the description carefully before
+                                    making your purchase!</p>
+                                <p>⚠️ The files are for personal use only – they may not be resold, copied, distributed,
+                                    modified, shared, or used commercially.</p>
+                            </div>
+                        </div>
+
+                        <!-- Product Description Accordion -->
+                        <div class="product-accordion">
+                            <details class="accordion__details">
+                                <summary class="accordion__summary">
+                                    <div class="summary__title">
+                                        <span class="material-icon">check_box</span>
+                                        <h3 class="accordion__title">What you will get</h3>
+                                    </div>
+                                    <svg class="icon icon-caret" viewBox="0 0 10 6">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 010 .708l4-4a.5.5 0 000-.708z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </summary>
+                                <div class="accordion__content-wrapper">
+                                    <div class="accordion__content">
+                                        <ul class="feature-list">
+                                            <li>✅ Complete budgeting template for Excel & Google Sheets</li>
+                                            <li>✅ Works with all currencies worldwide</li>
+                                            <li>✅ Automated calculations and formulas</li>
+                                            <li>✅ Visual charts and graphs included</li>
+                                            <li>✅ Mobile-friendly design</li>
+                                            <li>✅ Easy-to-follow instructions</li>
+                                            <li>✅ Lifetime access to the template</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <details class="accordion__details">
+                                <summary class="accordion__summary">
+                                    <div class="summary__title">
+                                        <span class="material-icon">check_box</span>
+                                        <h3 class="accordion__title">How to use</h3>
+                                    </div>
+                                    <svg class="icon icon-caret" viewBox="0 0 10 6">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 010 .708l4-4a.5.5 0 000-.708z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </summary>
+                                <div class="accordion__content-wrapper">
+                                    <div class="accordion__content">
+                                        <ol class="steps-list">
+                                            <li><strong>Step 1:</strong> Download the template file</li>
+                                            <li><strong>Step 2:</strong> Open in Google Sheets or Microsoft Excel</li>
+                                            <li><strong>Step 3:</strong> Enter your income and expense categories</li>
+                                            <li><strong>Step 4:</strong> Start tracking your budget immediately</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <details class="accordion__details">
+                                <summary class="accordion__summary">
+                                    <div class="summary__title">
+                                        <span class="material-icon">check_box</span>
+                                        <h3 class="accordion__title">Compatibility</h3>
+                                    </div>
+                                    <svg class="icon icon-caret" viewBox="0 0 10 6">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 010 .708l4-4a.5.5 0 000-.708z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </summary>
+                                <div class="accordion__content-wrapper">
+                                    <div class="accordion__content">
+                                        <div class="compatibility-grid">
+                                            <div class="compatibility-item">
+                                                <h4>Google Sheets</h4>
+                                                <ul>
+                                                    <li>✅ Works on all devices</li>
+                                                    <li>✅ Requires free Google account</li>
+                                                    <li>✅ Automatic updates</li>
+                                                </ul>
+                                            </div>
+                                            <div class="compatibility-item">
+                                                <h4>Microsoft Excel</h4>
+                                                <ul>
+                                                    <li>✅ Excel 2016 or later</li>
+                                                    <li>✅ Office 365 compatible</li>
+                                                    <li>✅ Excel Online support</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Shopping Cart -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" onclick="toggleCart()">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">
+                Download for free now
+            </button>
+            <button class="continue-shopping" onclick="toggleCart()">
+                Continue Shopping
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Cart Icon -->
+    <div class="sticky-cart" onclick="toggleCart()">
+        <div class="sticky-cart-icon">
+            <i data-lucide="shopping-cart"></i>
+            <span class="sticky-cart-count" id="stickyCartCount">0</span>
+        </div>
+    </div>
+<!-- Why is it Free Section -->
+<section class="product-disclaimer-section">
+    <div class="container">
+
+        <!-- Headline -->
+        <h2 class="disclaimer-title">Why is it Free ?</h2>
+
+        <!-- Sub-headline -->
+        <p class="disclaimer-subtitle">
+            We're giving away our budget template for free to celebrate our first year in business! (A small processing
+            fee applies.)
+        </p>
+
+        <!-- Warning List -->
+        <div class="warning-list">
+
+            <!-- Item 1 -->
+            <div class="warning-item">
+                <span class="warning-icon">⚠️</span>
+                <span class="warning-text">This is a digital product – no physical items will be shipped!</span>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="warning-item">
+                <span class="warning-icon">⚠️</span>
+                <span class="warning-text">To download all files, please use the Safari or Chrome browser.</span>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="warning-item">
+                <span class="warning-icon">⚠️</span>
+                <span class="warning-text">Due to the digital nature of the product, WiseBudget does not offer returns,
+                    exchanges, cancellations, or refunds. Please read the description carefully before making your
+                    purchase!</span>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="warning-item">
+                <span class="warning-icon">⚠️</span>
+                <span class="warning-text">The files are for personal use only – they may not be resold, copied,
+                    distributed, modified, shared, or used commercially.</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Results Section -->
+<section class="results-section">
+    <div class="container">
+        <div class="results-grid">
+
+            <!-- Left Column: Overview -->
+            <div class="results-overview">
+                <h2 class="results-title">Results</h2>
+                <p class="results-description">
+                    More than 90% of all customers have made significant progress toward achieving their financial
+                    goals.
+                </p>
+            </div>
+
+
+                <!-- Stat 1 -->
+                <div class="stat-item">
+                    <div class="stat-circle" style="background: conic-gradient(#2563eb 334deg, #e5e7eb 334deg);">
+                        <span class="stat-percentage">93%</span>
+                    </div>
+                    <p class="stat-text">have stopped spending money on unnecessary things and have broken free from bad
+                        shopping</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="stat-item">
+                    <div class="stat-circle" style="background: conic-gradient(#2563eb 338deg, #e5e7eb 338deg);">
+                        <span class="stat-percentage">94%</span>
+                    </div>
+                    <p class="stat-text">have found that their savings increase every month after paying the bills.</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="stat-item">
+                    <div class="stat-circle" style="background: conic-gradient(#2563eb 324deg, #e5e7eb 324deg);">
+                        <span class="stat-percentage">90%</span>
+                    </div>
+                    <p class="stat-text">have learned to manage their bills and understand how budgeting works.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Facebook Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container">
+        <h2 class="testimonials-title">Facebook testimonials</h2>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <img src="imgs/testimonial-1.webp" alt="Facebook testimonial from customer" class="testimonial-image">
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <img src="imgs/testimonial-2.webp" alt="Facebook testimonial from customer" class="testimonial-image">
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-card">
+                <img src="imgs/testimonial-3.webp" alt="Facebook testimonial from customer" class="testimonial-image">
+            </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+         
+            <div class="footer-text">
+                © 2025 BudgetMaster Pro. All rights reserved.
+            </div>
+        </div>
+
+        <div class="payment-methods">
+            <img src="imgs/visa-logo.svg" alt="Visa">
+            <img src="imgs/mastercard-logo.svg" alt="Mastercard">
+            <img src="imgs/amex-logo.svg" alt="American Express">
+            <img src="imgs/apple-pay-logo.svg" alt="Apple Pay">
+        </div>
+    </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="js/clean.js"></script>
+<script src="js/product-detail.js"></script>
+</body>
+
+</html>

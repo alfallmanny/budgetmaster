@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Complete set of budgeting templates for Excel & Google Sheets. All templates in one package - best value for serious budgeters.">
+    <title>Complete Budget Suite - BudgetMaster Pro</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="imgs/favicon.svg">
+    <link rel="alternate icon" href="imgs/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/product.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span class="free-text">FREE Budgeting Template TODAY ONLY!</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>BudgetMaster Pro</h1>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-outline" onclick="toggleCart()">
+                    <i data-lucide="shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Product Header -->
+    <section class="product-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <a href="catalog.html">Templates</a> / <span>Complete Budget Suite</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="product-details">
+        <div class="container">
+            <div class="product-main">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <div class="template-showcase">
+                            <img src="imgs/budget_suite_main_image_7.jpg" alt="Complete Budget Suite" style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        </div>
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <div class="thumbnail active">
+                            <img src="imgs/budget_suite_main_image_7.jpg" alt="Complete Budget Suite" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;">
+                        </div>
+                        <div class="thumbnail">
+                            <i data-lucide="spreadsheet"></i>
+                        </div>
+                        <div class="thumbnail">
+                            <i data-lucide="pie-chart"></i>
+                        </div>
+                        <div class="thumbnail">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <div class="product-badges">
+                        <span class="badge bestseller">BESTSELLER</span>
+                        <span class="badge value">BEST VALUE</span>
+                    </div>
+                    
+                    <h1 class="product-title">Complete Budget Suite</h1>
+                    
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i data-lucide="star" class="filled"></i>
+                            <i data-lucide="star" class="filled"></i>
+                            <i data-lucide="star" class="filled"></i>
+                            <i data-lucide="star" class="filled"></i>
+                            <i data-lucide="star" class="filled"></i>
+                        </div>
+                        <span class="rating-text">(1,247 reviews)</span>
+                    </div>
+
+                    <div class="product-price-section">
+                        <div class="price-display">
+                            <span class="current-price">$49.99</span>
+                            <span class="original-price">$69.99</span>
+                        </div>
+                        <div class="savings-text">You save $20.00 (29% off)</div>
+                    </div>
+
+                    <div class="instant-download-badge">
+                        <i data-lucide="zap"></i>
+                        <span>Instant Download</span>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large" onclick="addToCart('complete-budget-suite')">
+                            <i data-lucide="shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                        <button class="btn btn-secondary btn-large" onclick="buyNow('complete-budget-suite')">
+                            <i data-lucide="credit-card"></i>
+                            Buy Now
+                        </button>
+                    </div>
+
+                    <div class="guarantees">
+                        <div class="guarantee-item">
+                            <i data-lucide="shield-check"></i>
+                            <span>30-Day Money Back Guarantee</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i data-lucide="lock"></i>
+                            <span>Secure SSL Checkout</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i data-lucide="mail"></i>
+                            <span>Instant Email Delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compatibility -->
+    <section class="compatibility">
+        <div class="container">
+            <h3>Compatible With:</h3>
+            <div class="compatibility-badges">
+                <div class="comp-badge">
+                    <i data-lucide="monitor"></i>
+                    <span>Excel 2016+</span>
+                </div>
+                <div class="comp-badge">
+                    <i data-lucide="globe"></i>
+                    <span>Google Sheets</span>
+                </div>
+                <div class="comp-badge">
+                    <i data-lucide="file-text"></i>
+                    <span>PDF Version</span>
+                </div>
+                <div class="comp-badge">
+                    <i data-lucide="box"></i>
+                    <span>Notion</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="whats-included">
+        <div class="container">
+            <h2>What's Included</h2>
+            <div class="included-grid">
+                <div class="included-item">
+                    <div class="check-icon">
+                        <i data-lucide="check"></i>
+                    </div>
+                    <div class="item-content">
+                        <h4>Basic Budget Planner</h4>
+                        <p>Simple monthly income and expense tracker with goal setting features</p>
+                    </div>
+                </div>
+                <div class="included-item">
+                    <div class="check-icon">
+                        <i data-lucide="check"></i>
+                    </div>
+                    <div class="item-content">
+                        <h4>Advanced Savings Planner</h4>
+                        <p>Multi-goal savings tracker with automated calculations and progress visualization</p>
+                    </div>
+                </div>
+                <div class="included-item">
+                    <div class="check-icon">
+                        <i data-lucide="check"></i>
+                    </div>
+                    <div class="item-content">
+                        <h4>Debt Snowball Tracker</h4>
+                        <p>Strategic debt payoff planner with payment scheduling and visual progress</p>
+                    </div>
+                </div>
+                <div class="included-item">
+                    <div class="check-icon">
+                        <i data-lucide="check"></i>
+                    </div>
+                    <div class="item-content">
+                        <h4>Meal Planning & Budget</h4>
+                        <p>Weekly meal planner with grocery budget tracking and cost analysis</p>
+                    </div>
+                </div>
+                <div class="included-item">
+                    <div class="check-icon">
+                        <i data-lucide="check"></i>
+                    </div>
+                    <div class="item-content">
+                        <h4>Yearly Financial Planner</h4>
+                        <p>Comprehensive annual budget with monthly breakdowns and goal tracking</p>
+                    </div>
+                </div>
+                <div class="included-item">
+                    <div class="check-icon">
+                        <i data-lucide="check"></i>
+                    </div>
+                    <div class="item-content">
+                        <h4>Investment Tracker</h4>
+                        <p>Portfolio performance tracker with dividend tracking and ROI analysis</p>
+                    </div>
+                </div>
+                <div class="included-item">
+                    <div class="check-icon">
+                        <i data-lucide="check"></i>
+                    </div>
+                    <div class="item-content">
+                        <h4>Customization Guide</h4>
+                        <p>Step-by-step instructions for personalizing all templates</p>
+                    </div>
+                </div>
+                <div class="included-item">
+                    <div class="check-icon">
+                        <i data-lucide="check"></i>
+                    </div>
+                    <div class="item-content">
+                        <h4>Lifetime Updates</h4>
+                        <p>Free updates and new templates as they're released</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Purchase</h4>
+                        <p>Complete your secure checkout in under 2 minutes</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Download</h4>
+                        <p>Instantly receive download links via email</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Open</h4>
+                        <p>Choose Excel, Google Sheets, or PDF format</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Customize</h4>
+                        <p>Enter your financial information and goals</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Track</h4>
+                        <p>Watch your dashboard update automatically</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why You'll Love It -->
+    <section class="why-love">
+        <div class="container">
+            <h2>Why You'll Love It</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <h4>Automatic Dashboard</h4>
+                    <p>Real-time calculations and visual charts update as you enter data</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i data-lucide="folder"></i>
+                    </div>
+                    <h4>Expense Categories</h4>
+                    <p>Pre-organized categories you can customize to match your spending</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <h4>Savings Tracker</h4>
+                    <p>Visual progress bars and milestone celebrations to keep you motivated</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i data-lucide="flag"></i>
+                    </div>
+                    <h4>Goals Tracker</h4>
+                    <p>Set and track multiple financial goals with deadline reminders</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h4>Multi-Currency Support</h4>
+                    <p>Works with any currency worldwide - just change the symbol</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h4>Mobile Friendly</h4>
+                    <p>Access and update your budget on any device, anywhere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Instructions -->
+    <section class="download-instructions">
+        <div class="container">
+            <h2>Download Instructions</h2>
+            <div class="instructions-grid">
+                <div class="instruction-item">
+                    <h4>After Purchase</h4>
+                    <p>You'll receive an email with secure download links within 1 minute of purchase.</p>
+                </div>
+                <div class="instruction-item">
+                    <h4>Multiple Formats</h4>
+                    <p>Each template is available in Excel (.xlsx), Google Sheets, and PDF formats.</p>
+                </div>
+                <div class="instruction-item">
+                    <h4>Easy Access</h4>
+                    <p>Download links remain active for 30 days, and you can access them anytime from your account.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product FAQ -->
+    <section class="product-faq">
+        <div class="container">
+            <h2>Product FAQ</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What makes this different from free templates online?</span>
+                        <i data-lucide="plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our templates are professionally designed and tested by thousands of users. They include advanced features like automatic calculations, visual dashboards, and comprehensive goal tracking that free templates typically lack. Plus, you get ongoing updates and support.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do I need Excel or Google Sheets to use these?</span>
+                        <i data-lucide="plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You'll need either Microsoft Excel (2016 or newer) or a Google account for Google Sheets. We also provide PDF versions for viewing and basic editing. All templates work on Windows, Mac, and mobile devices.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I customize the templates for my specific needs?</span>
+                        <i data-lucide="plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! All templates are fully editable. You can add or remove categories, change formulas, modify colors, and adapt them to your unique financial situation. We include a detailed customization guide to help you get started.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What if I need help setting up or customizing?</span>
+                        <i data-lucide="plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We provide comprehensive setup guides, video tutorials, and email support. Most customers are up and running within 15 minutes. We also have a detailed FAQ section and help documentation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Are there any ongoing fees or subscriptions?</span>
+                        <i data-lucide="plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No! This is a one-time purchase with lifetime access. You'll receive free updates and new templates as they're released, all included in the original price.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>You Might Also Like</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="template-preview">
+                            <i data-lucide="spreadsheet"></i>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Basic Budget Planner</h3>
+                        <p>Perfect starting template for beginners</p>
+                        <div class="product-price">
+                            <span class="price">FREE</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('basic-budget-planner')">
+                            Download Free
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="template-preview">
+                            <i data-lucide="credit-card"></i>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Debt Snowball Tracker</h3>
+                        <p>Strategic debt payoff planner</p>
+                        <div class="product-price">
+                            <span class="price">$15.99</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('debt-snowball-tracker')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="template-preview">
+                            <i data-lucide="piggy-bank"></i>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Advanced Savings Planner</h3>
+                        <p>Multi-goal savings tracker</p>
+                        <div class="product-price">
+                            <span class="price">$12.99</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('advanced-savings-planner')">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BudgetMaster Pro</h3>
+                    <p>Helping people take control of their finances with simple, powerful budgeting templates.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="catalog.html">All Templates</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="data-usage.html">Data Usage Opt-Out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BudgetMaster Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" onclick="toggleCart()">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">
+                Download for free now
+            </button>
+            <button class="continue-shopping" onclick="toggleCart()">
+                Continue Shopping
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Cart Icon -->
+    <div class="sticky-cart" onclick="toggleCart()">
+        <div class="sticky-cart-icon">
+            <i data-lucide="shopping-cart"></i>
+            <span class="sticky-cart-count" id="stickyCartCount">0</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/clean.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

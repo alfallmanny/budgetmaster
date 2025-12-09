@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Download our FREE budgeting template for Excel & Google Sheets. Simple, powerful budgeting tools to help you master your money.">
+    <meta name="keywords"
+        content="free budget template, excel budget planner, google sheets budget, budgeting template download">
+    <title>BudgetMaster Pro - Free Budgeting Template Download</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="imgs/favicon.svg">
+    <link rel="alternate icon" href="imgs/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/clean.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "BudgetMaster Pro",
+        "description": "Free budgeting templates for Excel & Google Sheets",
+        "url": "https://budgetmaster.pro"
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span class="free-text">FREE Budgeting Template TODAY ONLY!</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>BudgetMaster Pro</h1>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-outline" onclick="toggleCart()">
+                    <i data-lucide="shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Download Now<br>For FREE</h1>
+                        <p class="hero-description">Simple budgeting template for Excel & Google Sheets. Perfect for
+                            tracking expenses, savings, and financial goals.</p>
+
+                        <!-- Free Badge -->
+                        <div class="free-badge">
+                            <span class="save-100">SAVE 100%</span>
+                            <span class="free-label">FREE TODAY</span>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="product-showcase">
+                        <div class="product-card">
+                            <!-- Product Image -->
+                            <div class="product-image">
+                                <div class="photo-carousel">
+                                    <div class="carousel-container">
+                                        <div class="carousel-track" id="carouselTrack">
+                                            <div class="carousel-slide active">
+                                                <a href="product-detail.html" class="carousel-link">
+                                                    <img src="imgs/budget_suite_main_image_0.webp" alt="Budget Dashboard Screenshot - Main overview with spending breakdown" class="carousel-image">
+                                                </a>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <a href="product-detail.html" class="carousel-link">
+                                                    <img src="imgs/template-1.webp" alt="Expense Tracker - Detailed expense categories" class="carousel-image">
+                                                </a>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <a href="product-detail.html" class="carousel-link">
+                                                    <img src="imgs/budget_suite_main_image_2.webp" alt="Savings Goals - Track your financial progress" class="carousel-image">
+                                                </a>
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <a href="product-detail.html" class="carousel-link">
+                                                    <img src="imgs/template-2.webp" alt="Monthly Reports - Visual spending analysis" class="carousel-image">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Navigation Dots -->
+                                        <div class="carousel-nav">
+                                            <button class="nav-dot active" data-slide="0"></button>
+                                            <button class="nav-dot" data-slide="1"></button>
+                                            <button class="nav-dot" data-slide="2"></button>
+                                            <button class="nav-dot" data-slide="3"></button>
+                                        </div>
+
+                                        <!-- Navigation Arrows -->
+                                        <button class="carousel-btn prev" id="prevBtn">
+                                            <i data-lucide="chevron-left"></i>
+                                        </button>
+                                        <button class="carousel-btn next" id="nextBtn">
+                                            <i data-lucide="chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Info -->
+                            <div class="product-info">
+                                <a href="product-detail.html" class="product-title-link">
+                                    <h3 class="product-title">Budgeting Template for Excel & Google Sheets</h3>
+                                </a>
+                                <p class="product-subtitle">Easy to use – Google Sheets</p>
+
+                                <!-- Pricing -->
+                                <div class="pricing">
+                                    <span class="current-price">$0.00</span>
+                                    <span class="original-price">$49.99</span>
+                                </div>
+
+                                <!-- Download Button -->
+                                <button class="download-btn" onclick="addToCart('free-budget-template')">
+                                    <i data-lucide="shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                
+                <div class="footer-text">
+                    © 2025 BudgetMaster Pro. All rights reserved.
+                </div>
+            </div>
+
+            <div class="payment-methods">
+                <img src="imgs/visa-logo.svg" alt="Visa">
+                <img src="imgs/mastercard-logo.svg" alt="Mastercard">
+                <img src="imgs/amex-logo.svg" alt="American Express">
+                <img src="imgs/apple-pay-logo.svg" alt="Apple Pay">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" onclick="toggleCart()">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">
+                Download for free now
+            </button>
+            <button class="continue-shopping" onclick="toggleCart()">
+                Continue Shopping
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Cart Icon -->
+    <div class="sticky-cart" onclick="toggleCart()">
+        <div class="sticky-cart-icon">
+            <i data-lucide="shopping-cart"></i>
+            <span class="sticky-cart-count" id="stickyCartCount">0</span>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/clean.js"></script>
+</body>
+
+</html>
